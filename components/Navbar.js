@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+    const route= useRouter();
     return ( 
         <nav>
+            <div>
+                <button onClick={() => route.back()}>Go back</button>
+            </div>
             <div className='navbar'>
                 <h1>Sam Santamaria</h1>
             </div>
