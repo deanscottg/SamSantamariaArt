@@ -13,8 +13,8 @@ export default function Home() {
     <div>
       <h1 className={ styles.title }>Sam Santamaria Art</h1>
         <h2 className={ styles.text }>Fine Art out of Tampa Florida</h2>
-          <p className={ styles.text }>Originally from the Phillippines and having moved to the states in bla bla bla</p>
-          <Link  className={ styles.btn} href="/gallery">Check out my latest work!</Link>
+          <p className={ styles.text }>Artist | Photographer | Author </p>
+          <Link  className={ styles.btn } href="/gallery">Check out my latest work!</Link>
     </div>
   )
 }
