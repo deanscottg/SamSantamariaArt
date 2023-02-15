@@ -1,9 +1,9 @@
-import ArtCard from "components/ArtCard";
+import ArtCard from "../../../components/ArtCard";
 
 const Photographs = () => {
     return (
         <div>
-            <ArtCard></ArtCard>
+            <ArtCard />
         </div>
     );
 }

@@ -1,8 +1,8 @@
-import ArtCard from "components/ArtCard";
+import ArtCard from "../../../components/ArtCard";
 const Paintings = () => {
     return (
         <div>
-            <ArtCard></ArtCard>
+            <ArtCard />
         </div>
     );
 }
