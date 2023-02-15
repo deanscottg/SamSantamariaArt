@@ -1,15 +1,13 @@
+import Image from "next/image";
 const ArtCard = () => {
     return (
-        <div>
-            <containter>
+        <div className="container">
                 <h1>Painting name</h1>
-                <img src="/squidward.jpg">
-                </img>
+                <Image alt="squidward" src="/squidward.jpg" width={300} height={500}/>
                 <p>
                     This is all the info about this painting
                 </p>
 
-            </containter>
                 
         </div>
     );
