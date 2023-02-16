@@ -12,7 +12,8 @@ const Gallery = () => {
                 <a href="/gallery/painting">
                 <Image src='/featured2.jpg' alt="featured2" height={350} width={350}></Image>
                 {/* <Link>Painting/Editioned Prints</Link>  */}
-                <h2 className="text-center">Painting/Editioned Prints</h2>
+                    <h2 className="text-center">Painting/Editioned Prints</h2>
+                    
                 </a>
             </div>   
             <div className="justify-center items-center">
