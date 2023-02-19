@@ -1,12 +1,13 @@
+import Image from "next/image";
 const Footer = () => {
     return ( 
-        <footer className="flex-row">
-            <div className='align-left'>Copyright 2023 Sam Santamaria Art
+        <footer>
+            <div className='flex justify-center ml-auto'>
+                <p className=''>Copyright Sam Santamaria Art 2023</p>
+                <div className="ml-auto">
+                <Image className=''src='/facebook.png' alt='facebook' height={40} width={40} />
+                </div>
             </div>
-            <div className='align-right'>
-
-            </div>
-            
         </footer>
      );
 }
