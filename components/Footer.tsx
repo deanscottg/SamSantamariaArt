@@ -1,7 +1,12 @@
 const Footer = () => {
     return ( 
-        <footer>
-            Copyright 2023 Sam Santamaria Art
+        <footer className="flex-row">
+            <div className='align-left'>Copyright 2023 Sam Santamaria Art
+            </div>
+            <div className='align-right'>
+
+            </div>
+            
         </footer>
      );
 }

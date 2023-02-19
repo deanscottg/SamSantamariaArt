@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      bodoni: ["Bodoni Moda", "serif"],
+      lobster: ["Lobster Two", "cursive"]
+    }
   },
   plugins: [],
 }

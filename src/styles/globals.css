@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700&family=Lobster+Two&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-6xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
+  }
+  body {
+    @apply min-h-screen flex flex-col bg-gray-200;
+  }
+}
+
+@layer components {
+  .painting-nav-link {
+    @apply py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white  hover:text-purple-600;
+  }
+}

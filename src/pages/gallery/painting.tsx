@@ -3,7 +3,7 @@ const Paintings = () => {
     return (
         <div>
             <div className="py-4">
-                <h1 className="text-center text-6xl py-2">Paintings and Editioned Prints</h1>
+                <h1 className="text-center  py-2">Paintings and Editioned Prints</h1>
                 <p className='my-10 mx-60 text-center'>
                     All original, one-of-a-kind paintings and photographs are available.
                     Limited and numbered editions of the originals are reproduced as

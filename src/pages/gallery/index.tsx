@@ -3,8 +3,8 @@ import Image from "next/image";
 const Gallery = () => {
     return ( 
     <div>
-        <div className="py-4 text-center">
-            <h1 className="text-center text-6xl py-2">Gallery</h1>
+        <div className="py-4 text-center space-y-3">
+            <h1>Gallery</h1>
             <p>This is where my art will be categorized and displayed</p>
         </div>
         <div className='flex items-row m-sm  border-4 justify-center items-center p-10 space-x-12'>
