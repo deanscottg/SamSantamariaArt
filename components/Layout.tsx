@@ -2,16 +2,14 @@ import { PropsWithChildren } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Layout = ({ children }:PropsWithChildren ) => {
-    return (
-        <div className='content'>
-            <Navbar />
-                { children }
-            <Footer />
+const Layout = ({ children }: PropsWithChildren) => {
+	return (
+		<div>
+			<Navbar />
+			{children}
+			<Footer />
+		</div>
+	);
+};
 
-
-        </div>
-    );
-}
- 
 export default Layout;
