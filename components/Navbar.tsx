@@ -6,7 +6,7 @@ const Navbar = () => {
     const route= useRouter();
     return ( 
 
-        <nav className="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounde">            
+        <nav className="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded">            
             <div className="container flex flex-wrap items-center justify-between mx-auto">                
                 <a href="/" className="flex items-center"> 
                     <Image src="/s-logo.png" alt="s-logo" height={300} width={250} className="h-6 mr-3 sm:h-9">
