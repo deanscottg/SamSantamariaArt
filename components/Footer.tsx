@@ -4,7 +4,7 @@ const Footer = () => {
 		<footer className="flex justify-center items-center relative ">
 			<p>&#169; Copyright Sam Santamaria Art 2023</p>
 
-			<div className="absolute flex right-0">
+			<div className="absolute flex right-0 space-x-2">
 				<Image
 					src="/facebook.png"
 					alt="facebook"
@@ -12,14 +12,14 @@ const Footer = () => {
 					width={40}
 				/>
 				<Image
-					src="/facebook.png"
-					alt="facebook"
+					src="/instagram.png"
+					alt="finstagram"
 					height={40}
 					width={40}
 				/>
 				<Image
-					src="/facebook.png"
-					alt="facebook"
+					src="/twitter.png"
+					alt="twitter"
 					height={40}
 					width={40}
 				/>

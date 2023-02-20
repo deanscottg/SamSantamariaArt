@@ -12,8 +12,10 @@ module.exports = {
     extend: {},
     fontFamily: {
       bodoni: ["Bodoni Moda", "serif"],
-      lobster: ["Lobster Two", "cursive"]
+      lobster: ["Lobster Two", "cursive"],
+      josefin: ["Josefin Sans", "sans-serif"],
     }
+    
   },
   plugins: [],
 }
