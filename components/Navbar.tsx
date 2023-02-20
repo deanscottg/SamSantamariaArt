@@ -15,12 +15,13 @@ const Navbar = () => {
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
                 </a>
                 <div className='hidden w-full md:block md:w-auto'>
-                    <ul className='flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-200 dark:border-gray-700'>
+                    <ul className='flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-6 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-200 dark:border-gray-700'>
                     <button onClick={() => route.back()}>Go back</button>
-                    <Link href="/" className='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page" hover:text-purple-600'> Home </Link>
-                    <Link href="/gallery" className='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page" hover:text-purple-600'> Gallery </Link>
-                    <Link href="/about" className='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page" hover:text-purple-600'> About </Link>
-                    <Link href="/contact" className='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page" hover:text-purple-600'> Contact </Link>
+                    <Link href="/" className='nav-link-btn'>Home</Link>
+                    {/* <Link href="/" className='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page" hover:text-purple-600'> Home </Link> */}
+                    <Link href="/gallery" className='nav-link-btn'> Gallery </Link>
+                    <Link href="/about" className='nav-link-btn'> About </Link>
+                    <Link href="/contact" className='nav-link-btn'> Contact </Link>
                     </ul>
                 </div>  
             </div>
