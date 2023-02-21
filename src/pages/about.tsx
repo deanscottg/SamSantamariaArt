@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="">  
+        <div className="page-container">  
             <h1 className="text-center">About the Artist</h1>
             <div className=" text-center border-b-2 border-black">
                 <h2 className="text-2xl font-bold italic pt-10 pb-10">Artist Statement</h2> 
