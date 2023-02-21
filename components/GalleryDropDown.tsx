@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import PaintingsDropDown from "./PaintingsDropDown";
-const GalleryDropDown: React.FC<{isOpen: boolean}> = () => {
+const GalleryDropDown = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
+		<div>
 		<button
 			onClick={() => setIsOpen((prev) => !prev)}
 			className="nav-link-btn flex flex-row"
@@ -23,6 +24,7 @@ const GalleryDropDown: React.FC<{isOpen: boolean}> = () => {
 					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 				/>
 			</svg>
+		</button>
 			{isOpen && (
 				<div className="bg-transparent absolute top-20 text-gray-800 flex flex-col items start rounded-lg p-2">
 					<Link
@@ -32,7 +34,7 @@ const GalleryDropDown: React.FC<{isOpen: boolean}> = () => {
 						{" "}
 						Paintings
 					</Link>
-					<PaintingsDropDown isOpen={isOpen} setIsOpen={setIsOpen} />
+					<PaintingsDropDown isOpen={isOpen}  />
 					<Link
 						className="gallery-dropdown-item"
 						href="/gallery/photograph"
@@ -42,7 +44,8 @@ const GalleryDropDown: React.FC<{isOpen: boolean}> = () => {
 					</Link>
 				</div>
 			)}
-		</button>
+		
+	</div>
 	);
 };
 
