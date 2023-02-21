@@ -12,9 +12,9 @@ const Gallery = () => {
                 <a href="/gallery/painting">
                 <Image 
                     src='/featured2.jpg' 
-                    alt="featured2" height={400} 
-                    width={400}
-                    className="hover:scale-105 duration-500"
+                    alt="featured2" height={500} 
+                    width={500}
+                    className="hover:scale-105 duration-500 pb-8"
                 >
                     
                 </Image>
@@ -26,9 +26,9 @@ const Gallery = () => {
                 <Image 
                     src='/featured1.jpg' 
                     alt="featured1" 
-                    height={400} 
-                    width={400}
-                    className="hover:scale-105 duration-500"
+                    height={500} 
+                    width={500}
+                    className="hover:scale-105 duration-500 pb-8"
                 >    
                 </Image>
                 {/* <Link>Painting/Editioned Prints</Link>  */}
