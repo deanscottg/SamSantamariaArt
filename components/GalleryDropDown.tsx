@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import PaintingsDropDown from "./PaintingsDropDown";
-const GalleryDropDown = () => {
+const GalleryDropDown: React.FC<{isOpen: boolean}> = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<button
@@ -32,7 +32,7 @@ const GalleryDropDown = () => {
 						{" "}
 						Paintings
 					</Link>
-					<PaintingsDropDown />
+					<PaintingsDropDown isOpen={isOpen} setIsOpen={setIsOpen} />
 					<Link
 						className="gallery-dropdown-item"
 						href="/gallery/photograph"

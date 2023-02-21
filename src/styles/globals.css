@@ -6,7 +6,7 @@
 
 @layer base {
   h1 {
-    @apply text-6xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
+    @apply text-7xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
   }
   /* p {
     @apply font-josefin;

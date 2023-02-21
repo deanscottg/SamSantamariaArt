@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Link from "next/link";
-const PaintingsDropDown = () => {
+const PaintingsDropDown: React.FC<{isOpen: boolean}> = ( ) => {
     const [isPaintingsOpen, setIsPaintingsOpen] =useState(false)
+    function handlePaintingsDropDownClick() {
+       console.log('clicked')
+    }
     return ( 
          <button 
-        onClick={() => setIsPaintingsOpen((prev) => !prev)}
+         onClick={handlePaintingsDropDownClick}
+        // onClick={() => setIsPaintingsOpen((prev) => !prev )}
         className="gallery-dropdown-item flex flex-row">
         Paintings by series
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
