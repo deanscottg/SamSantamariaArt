@@ -1,7 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import PaintingsDropDown from "./PaintingsDropDown";
+import { useEffect } from "react";
 const GalleryDropDown = () => {
+	useEffect(() => {
+		setIsOpen(false)
+	}, [])
+		
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div>
