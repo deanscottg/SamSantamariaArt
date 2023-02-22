@@ -14,7 +14,7 @@ module.exports = {
       bodoni: ["Bodoni Moda", "serif"],
       lobster: ["Lobster Two", "cursive"],
       josefin: ["Josefin Sans", "sans-serif"],
-    }
+    },
     
   },
   plugins: [],
