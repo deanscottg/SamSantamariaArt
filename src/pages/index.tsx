@@ -17,9 +17,12 @@ export default function Home() {
         <p className="text-center tracking-wider" >Artist | Photographer | Author </p> 
       </div>
       <div className=' justify-center flex h-screen'>
-        <div className='flex items-row  rounded-md h-96 w-96 m-sm  justify-center items-center'>
+        <div className='flex  flex-col items-row  rounded-md h-130 w-150 m-sm  justify-center items-center pt-16'>
           <FeaturedItems></FeaturedItems>
-           <p className="text-center py-10">Featured Works</p>
+          <div>
+              <p className="text-center py-10">Featured Works</p>
+
+          </div>
         </div> 
        
       </div>

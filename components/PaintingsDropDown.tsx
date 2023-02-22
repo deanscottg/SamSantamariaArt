@@ -6,14 +6,11 @@ const PaintingsDropDown = ( {isOpen } : Props ) => {
     function handlePaintingsDropDownClick() {
         if (isOpen)
         setIsPaintingsOpen((prev) => !prev)
-        // setIsOpen(true)
-       console.log('clicked')
     }
     return ( 
     <div>
          <button 
          onClick={handlePaintingsDropDownClick}
-        // onClick={() => setIsPaintingsOpen((prev) => !prev )}
         className="gallery-dropdown-item flex flex-row">
         Paintings by series
         <svg 
