@@ -24,10 +24,10 @@
     @apply hover:scale-110 duration-300;
   }
   .nav-link-btn {
-    @apply bg-gray-400 hover:bg-indigo-300 text-white font-bold py-2 px-4 rounded-full;
+    @apply bg-transparent text-center hover:bg-indigo-300 hover:underline text-white font-bold py-2 px-4 rounded-full;
   }
   .gallery-dropdown-item {
-    @apply flex justify-between text-black hover:bg-gray-400 bg-opacity-75 hover:italic border-r-transparent relative rounded-lg;
+    @apply flex justify-between text-white hover:bg-indigo-300 hover:font-bold bg-opacity-75 hover:italic border-r-transparent relative rounded-lg;
   }
   .art-card {
     @apply flex flex-col items-center hover:scale-105 duration-200;
@@ -36,6 +36,6 @@
     @apply pt-20 m-auto grid grid-cols-3 gap-8;
   }
   .page-container {
-    @apply mx-16 py-36 text-center space-y-3;
+    @apply mx-16 py-16 text-center space-y-3;
   }
 }
