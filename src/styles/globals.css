@@ -36,6 +36,6 @@
     @apply pt-20 m-auto grid grid-cols-3 gap-8;
   }
   .page-container {
-    @apply mx-16 py-16 text-center space-y-3;
+    @apply text-center space-y-3;
   }
 }
