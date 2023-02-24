@@ -1,7 +1,7 @@
 import PaintingNav from "../../../components/PaintingNav";
 const Paintings = () => {
     return (
-        <div className="page-container">
+        <div className="page-container h-screen">
             <div className="py-4">
                 <h1 className="text-center  py-2">Paintings and Editioned Prints</h1>
                 <p className='my-10 mx-60 text-center'>

@@ -4,7 +4,7 @@ const FeaturedItemsBanner = () => {
     return ( 
     <div className="m-0 w-screen bg-white h-200 flex flex-col rounded-sm">
         <div>
-            <h1 className='text-5xl pt-4'>Featured Works</h1>
+            <h2 className='text-5xl pt-4'>Featured Works</h2>
         </div>
         <div className="mx-32 grid grid-cols-1 content-center">
             <Image
