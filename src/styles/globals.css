@@ -6,7 +6,7 @@
 
 @layer base {
   h1 {
-    @apply text-7xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
+    @apply text-6xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
   }
   /* p {
     @apply font-josefin;
@@ -24,10 +24,10 @@
     @apply hover:scale-110 duration-300;
   }
   .nav-link-btn {
-    @apply bg-transparent text-center hover:bg-indigo-300 hover:underline text-white font-bold py-2 px-4 rounded-full;
+    @apply bg-transparent text-center hover:text-indigo-400 hover:underline hover:font-extrabold text-white text-lg font-bold py-2 px-4 rounded-full;
   }
   .gallery-dropdown-item {
-    @apply flex justify-between text-white hover:bg-indigo-300 hover:font-bold bg-opacity-75 hover:italic border-r-transparent relative rounded-lg;
+    @apply flex justify-between text-white text-lg hover:text-indigo-400 hover:font-extrabold  hover:italic border-r-transparent relative rounded-lg;
   }
   .art-card {
     @apply flex flex-col items-center hover:scale-105 duration-200;
