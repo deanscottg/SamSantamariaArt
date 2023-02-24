@@ -18,7 +18,7 @@
 
 @layer components {
   .painting-nav-link {
-    @apply py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white  hover:text-purple-600;
+    @apply py-2 pl-3 pr-4 text-lg text-black hover:underline hover:text-indigo-500  md:bg-transparent md:text-black md:p-0 dark:text-white;
   }
   .footer-icon-btn {
     @apply hover:scale-110 duration-300;
