@@ -1,3 +1,13 @@
+// Panting schema
+// Fields Include
+// - name
+// - image
+// - dimensions
+// -- height
+// -- width
+
+import dimensions from './dimensions'
+
 export default {
   name: 'painting',
   type: 'document',
@@ -5,15 +15,14 @@ export default {
   fields: [
     {
       name: 'name',
-      image: 'image',
       type: 'string',
-      dimensions: 'object',
-
-      fields: [
-        {name: 'height', type: 'integer', title: 'Height'},
-        {name: 'width', type: 'integer', title: 'Width'},
-      ],
-      title: 'Painting',
+      title: 'Name',
     },
+    {
+      name: 'image',
+      type: 'image',
+      title: 'Painting Image',
+    },
+    dimensions,
   ],
 }

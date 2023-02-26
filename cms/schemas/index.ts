@@ -1,3 +1,4 @@
-import series from './series'
 import painting from './painting'
-export const schemaTypes = [series, painting]
+import photograph from './photograph'
+import series from './series'
+export const schemaTypes = [series, painting, photograph]
