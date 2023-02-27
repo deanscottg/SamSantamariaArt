@@ -7,7 +7,7 @@
 // -- width
 
 import dimensions from './dimensions'
-
+const required = (Rule) => Rule.required().warning('This field is required')
 export default {
   name: 'painting',
   type: 'document',
@@ -17,11 +17,14 @@ export default {
       name: 'name',
       type: 'string',
       title: 'Name',
+      // validation: (Rule) => Rule.required().warning('Every painting requires a name'),
+      validation: required,
     },
     {
       name: 'image',
       type: 'image',
       title: 'Painting Image',
+      validation: required,
     },
     dimensions,
   ],
