@@ -18,7 +18,7 @@ export default {
       type: 'string',
       title: 'Name',
       // validation: (Rule) => Rule.required().warning('Every painting requires a name'),
-      // validation: required,
+      validation: required,
     },
     {
       name: 'image',
