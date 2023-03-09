@@ -14,8 +14,8 @@ export default {
     {
       title: 'Paintings',
       name: 'paintings',
-      type: 'array',
-      of: [{ type: 'painting' }],
+      type: 'reference',
+      to: [{ type: 'painting' }],
       validation: required,
     },
   ],

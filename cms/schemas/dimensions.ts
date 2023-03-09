@@ -23,5 +23,16 @@ export default {
           .min(1)
           .warning('Width cannot be less than 1 inch'),
     },
+    {
+      name: 'depth',
+      type: 'number',
+      title: 'Depth',
+      validation: (Rule) =>
+        Rule.required()
+          .warning('Depth cannot be empty')
+          .min(1)
+          .warning('Depth cannot be less than 1 inch')
+          .precision(2),
+    },
   ],
 }

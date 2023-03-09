@@ -26,6 +26,16 @@ export default {
       title: 'Painting Image',
       validation: required,
     },
-    dimensions,
+
+    {
+      name: 'dimensions',
+      title: 'Dimensions',
+      type: 'array',
+      of: [
+        {
+          type: 'dimensions',
+        },
+      ],
+    },
   ],
 }
