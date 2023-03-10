@@ -1,0 +1,1199 @@
+{
+  "ms": 556,
+  "query": "*[_type == 'series'] ",
+  "result": [
+    {
+      "_createdAt": "2023-03-09T17:49:17Z",
+      "_id": "363e7a8b-717f-4a01-96cd-c060438a71d4",
+      "_rev": "J1Zaqi3EH2flwEDgCchdPl",
+      "_type": "series",
+      "_updatedAt": "2023-03-09T18:03:46Z",
+      "name": "Greenfield",
+      "paintings": [
+        {
+          "_key": "668890a61b5b",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1ced1b8ce50f413810dac35e0e69a19529de008c-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Pincushion"
+        },
+        {
+          "_key": "4bf929bdc751",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-459dee337c0723eb8261fa847b624a6e43ab0669-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Marsh Grass"
+        },
+        {
+          "_key": "159364d64f4f",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7170a3d7930724466c7ead4c6fa8b49529cad5fb-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Spring Flourish"
+        },
+        {
+          "_key": "deec157eea09",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a3059698a4d10ba70bbead89708fe7f45e0ade58-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Reminiscence-Fall"
+        },
+        {
+          "_key": "f292c6ab0a6b",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c0f575ff223dac7274080c9599cd64ba6cc556e2-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Toast to Season’s Turn"
+        },
+        {
+          "_key": "b0990d350cfe",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d949859cf1eec073c2493c03287ee2bdad1d7530-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Coco Calypso"
+        },
+        {
+          "_key": "31cd18b9ee7e",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6163a2dfe1c7ce7861e0c7a39e3673e4ca02bc98-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Garden Lady"
+        },
+        {
+          "_key": "eeb6451c6d56",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7ccd70d72df521022d0f21aed8937f94426fef39-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Orient Moon"
+        },
+        {
+          "_key": "63709f9988d3",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3b3e1d4ff3041781647c99e082982a71bb113db5-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Arizona Dreaming"
+        },
+        {
+          "_key": "8e4b9c860c07",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-63d12b6595fea136059ceb8a692ee7fb445f82fb-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Winter Moonrise"
+        },
+        {
+          "_key": "1f92fb732f05",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9f3bf4dd9a207d3d8145f13aaa17745ffb594209-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Evergreen"
+        },
+        {
+          "_key": "940a34d99f09",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9759759a296bb6c231f7a2716d34808789929c62-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Sunset Peak"
+        },
+        {
+          "_key": "55488c30b382",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0b44b568c0026e314f9b2a6f08a9ea2f589ff8f8-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rembrandt’s Trees"
+        },
+        {
+          "_key": "f8ed44617124",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-19f3b603ac8e1eae22cfa56405fa1b65ad8df7ba-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Armful of Blooms"
+        },
+        {
+          "_key": "6786ebbd9ceb",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a08040e34f5980eeff56ba197f326235558e9a87-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Luna Mer"
+        },
+        {
+          "_key": "0cef43a8725e",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fab2d053ea58dff4e036935a16dfbc117bc7f6c1-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Zen Kites"
+        },
+        {
+          "_key": "60404fcc27aa",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-86e39ffceb8f820dea325a6b1b8a345875d4eef0-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Cygnet Pond"
+        },
+        {
+          "_key": "c310e7ab95c6",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5fed7143d2357fffe603f264fa732ac322820e4e-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "The Hunt"
+        },
+        {
+          "_key": "a3dff0071ce6",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-eb6f528c645431288e5923c618fe00ec9b14f7f4-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Red Herring"
+        },
+        {
+          "_key": "226c9e6e9c41",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-24224ceaf061be14700f32c1b26b6105d058d809-320x258-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Phoenix"
+        },
+        {
+          "_key": "d634ecfd2c3a",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ca781ec055fa3d37aaf6c4708ac962e684a58d72-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Phoenix Moon"
+        }
+      ]
+    },
+    {
+      "_createdAt": "2023-03-09T17:00:05Z",
+      "_id": "5c488b71-cf61-45bf-bbba-794f7947630c",
+      "_rev": "3758xqEtuLW8gQeE8sWdex",
+      "_type": "series",
+      "_updatedAt": "2023-03-09T18:35:07Z",
+      "name": "Embers ",
+      "paintings": { "_ref": "7a51bb2b-36d4-4826-964b-780d7be18972", "_type": "reference" }
+    },
+    {
+      "_createdAt": "2023-03-09T17:37:47Z",
+      "_id": "97d3028a-172c-4ff9-828d-8901be5ffc37",
+      "_rev": "3758xqEtuLW8gQeE8sP0L9",
+      "_type": "series",
+      "_updatedAt": "2023-03-09T18:03:55Z",
+      "name": "Studio Reminiscences ",
+      "paintings": [
+        {
+          "_key": "7eec2e345411",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-019edd3b15432fc37d7d414db21395511f08ce71-237x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Palms at Sunrise"
+        },
+        {
+          "_key": "af26d07ae7be",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6c5a3219abab06a32ad6792d073c00184681a697-320x243-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Moonrise at Monument Valley"
+        },
+        {
+          "_key": "c9b3a0e3ad2d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7cc52294c40f4820ed5933cc56aaab0530bd1716-224x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Spring Bouquet"
+        },
+        {
+          "_key": "c4e62dff3520",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5127e99a074570c7e858f05446ddfa710a3aa9b7-320x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rose Among Thorns and Thistle"
+        },
+        {
+          "_key": "2ef5be4bbea3",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dd03a03851ad669b08f371b865d4e7f774b62d5d-320x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Mangrove Bird "
+        },
+        {
+          "_key": "e67cedc135f1",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 12 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4bcc03447a3dcf0fb743cc7372af2b06d94693dc-320x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Summer Bouquet"
+        },
+        {
+          "_key": "a7e7f605bab1",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 12 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-02655a7dd4197e34701a50c8c5337b2b0e54395b-320x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Serene Pond"
+        },
+        {
+          "_key": "3576714726f3",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a3ca9915bd16a89f87a604ce5b628e028fb665ad-217x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Festive Palms"
+        },
+        {
+          "_key": "846ee07500a7",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c3ca5c7a85607c90c02dc07c157e1d08ba11aba0-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "First Rosebud"
+        },
+        {
+          "_key": "c5da4063c556",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c7f3591ec35bcac12af3caa3232daf3249114340-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Patio Birdbath"
+        },
+        {
+          "_key": "255e53b1dd4a",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d36435958ee4dba967ed99cc4ee9152a108a4880-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Banana Plant"
+        },
+        {
+          "_key": "2e259e916fd9",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8ec9b7f0485ef2ee0a711bb1127999fcc2c8f86e-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Patio Flowers"
+        },
+        {
+          "_key": "ab704147a76e",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4304eadca9b437d4a0a40f5617585ade939332ae-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Night Birds in Yokohama"
+        },
+        {
+          "_key": "366051b629a9",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3b65d50827d19c01652055e8e92da4270f1204d5-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "First Lily of the Season"
+        },
+        {
+          "_key": "7851bb716f42",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-713964fc93a92fb076843cfbce3e002c068f8af7-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Forest Buzzards"
+        },
+        {
+          "_key": "2b418790f86c",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-82686387980f8fe4d4df2bbfaf159204d7fe5e90-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Forest Dragonfly"
+        },
+        {
+          "_key": "c8150a1528fc",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2cbc814f82fd43a7a90dd87c96309771da857b82-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "The Lost Boot"
+        },
+        {
+          "_key": "24254a4a5097",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dc071e9c20e28c10f8404ee8de9d5180e8866150-320x247-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Another Late Night in the City"
+        },
+        {
+          "_key": "ae592ca2999c",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6d8c1b3fa1e769d73e9d262ec42dfd4d66d84a6e-632x632-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Angel Wings"
+        }
+      ]
+    },
+    {
+      "_createdAt": "2023-03-01T19:19:22Z",
+      "_id": "c1da0256-84e8-4051-8a73-a66159db8efb",
+      "_rev": "3758xqEtuLW8gQeE8sPBEs",
+      "_type": "series",
+      "_updatedAt": "2023-03-09T18:04:38Z",
+      "name": "Flora \u0026 Waterscapes",
+      "paintings": [
+        {
+          "_key": "d67f5df9b556",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-07cb75a4c11527cb1faa0f75fc4c17cdf2924dbf-320x235-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Zebrina in the Afternoon Shower"
+        },
+        {
+          "_key": "9f4ada882be4",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-282921197377cb8c64a5a61d07d40eeefbf9ba18-244x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Water Lillies"
+        },
+        {
+          "_key": "4abbe8efb712",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ffc32e7bf6649809d853af98f0f6c8e8633c9d9c-246x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Amaryllis and Damselflies"
+        },
+        {
+          "_key": "c30733d5f894",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-81a7238fa95e680d7868e8f7898fc507117eab89-320x317-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rebirth (Hyacinths)"
+        },
+        {
+          "_key": "cb40d23d991d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d25cddfaed135ddf5d18393883ad0fc83dc3648e-236x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Solitary Tiger Lily"
+        },
+        {
+          "_key": "f7417a5514ad",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d194a6ede2e04f6033d263512b6a9a1855c75716-317x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Anemone Fish"
+        },
+        {
+          "_key": "9eecf2d5f88a",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-40675bee99a68d29a8a9804702f422511bdad889-317x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Driftwood"
+        },
+        {
+          "_key": "479af3ecbb86",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4b3e978cd18d6d226221ae749feca9905c4f0ee3-320x313-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Lotus Pond"
+        },
+        {
+          "_key": "e1e76df581b0",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-35e753273beadc902573b44954add70d643335ff-320x306-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Lettuce Coral Reef"
+        },
+        {
+          "_key": "f681b4490325",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1ea6eeab230a1973b3ef042b706f7b96e217c0de-248x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Dolphins Frolic in a Sea Garden"
+        },
+        {
+          "_key": "79a36bce84c9",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 20 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-71133902c7229b01b7056bf9d0a9629020a4e688-251x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Prince of the Sea"
+        },
+        {
+          "_key": "12eb3416c39a",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e7067ab2e32c6adfc4a3573ebdf19799313fba6e-299x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Thistle in Bloom"
+        },
+        {
+          "_key": "7afab8d4d705",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b4c2707bde24e3c8a2bc63831f4ee8457b514ade-320x314-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Tulip in Early Snow"
+        },
+        {
+          "_key": "1d55d3c1b02b",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 20 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bb4bf7c31588be7e464d5d5f42f0574110331d7a-319x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rising Sprout"
+        },
+        {
+          "_key": "1dbc47132629",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-eba3f25c2d847f54533431f259fece75f847290a-714x568-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Bromeliad Blooms"
+        },
+        {
+          "_key": "d98c8e4afac7",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8d56fc3bac0f6e09ce545f7f7f58c45602c43967-320x224-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Floating Conchs"
+        },
+        {
+          "_key": "a9fa594280da",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a32a88ce58a63a1893c0375a4385e3f98cb8e958-320x231-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Chambered Nautilus"
+        },
+        {
+          "_key": "759070179506",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1065b39ded25d3608265cc2bd5f5d66c8ed8c6e6-320x234-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Seashell at Moonrise"
+        },
+        {
+          "_key": "f02aef679a3d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1d5dc647c4dc3d03fba70fbae2ce17a6754ed8e3-320x209-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Mother Conch"
+        },
+        {
+          "_key": "63e42f97dc76",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-592a48202ebdbeba5586a93e688765f160d9ea27-320x252-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Phalaenopsis"
+        },
+        {
+          "_key": "bc8d2c46df6d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e3db9fb4c5a1b4e8b28db23bcecb00598f05538f-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Fuchsia"
+        },
+        {
+          "_key": "6b730dcb5a7d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2a16ba6bfeb90c8ea5ffc45984bf28c263d53474-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Autumn Trees Riverside"
+        },
+        {
+          "_key": "be814d1cd8d3",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4e3d60942b43bda171276c66494b73f2bb268b4c-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Egrets Over Sunrise Sea"
+        },
+        {
+          "_key": "623e27b94e0d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-255096d6fba01ba923b14ca76926f47c5629a7db-221x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rain and Resting Damselflies"
+        }
+      ]
+    },
+    {
+      "_createdAt": "2023-03-01T19:19:22Z",
+      "_id": "drafts.c1da0256-84e8-4051-8a73-a66159db8efb",
+      "_rev": "a8722f53-c77c-4903-a12d-0c4724a8bc23",
+      "_type": "series",
+      "_updatedAt": "2023-03-09T18:21:43Z",
+      "name": "Flora \u0026 Waterscapes",
+      "paintings": [
+        {
+          "_key": "d67f5df9b556",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-07cb75a4c11527cb1faa0f75fc4c17cdf2924dbf-320x235-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Zebrina in the Afternoon Shower"
+        },
+        {
+          "_key": "9f4ada882be4",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-282921197377cb8c64a5a61d07d40eeefbf9ba18-244x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Water Lillies"
+        },
+        {
+          "_key": "4abbe8efb712",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ffc32e7bf6649809d853af98f0f6c8e8633c9d9c-246x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Amaryllis and Damselflies"
+        },
+        {
+          "_key": "c30733d5f894",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-81a7238fa95e680d7868e8f7898fc507117eab89-320x317-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rebirth (Hyacinths)"
+        },
+        {
+          "_key": "cb40d23d991d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d25cddfaed135ddf5d18393883ad0fc83dc3648e-236x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Solitary Tiger Lily"
+        },
+        {
+          "_key": "f7417a5514ad",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d194a6ede2e04f6033d263512b6a9a1855c75716-317x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Anemone Fish"
+        },
+        {
+          "_key": "9eecf2d5f88a",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-40675bee99a68d29a8a9804702f422511bdad889-317x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Driftwood"
+        },
+        {
+          "_key": "479af3ecbb86",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4b3e978cd18d6d226221ae749feca9905c4f0ee3-320x313-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Lotus Pond"
+        },
+        {
+          "_key": "e1e76df581b0",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-35e753273beadc902573b44954add70d643335ff-320x306-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Lettuce Coral Reef"
+        },
+        {
+          "_key": "f681b4490325",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1ea6eeab230a1973b3ef042b706f7b96e217c0de-248x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Dolphins Frolic in a Sea Garden"
+        },
+        {
+          "_key": "79a36bce84c9",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 20 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-71133902c7229b01b7056bf9d0a9629020a4e688-251x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Prince of the Sea"
+        },
+        {
+          "_key": "12eb3416c39a",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e7067ab2e32c6adfc4a3573ebdf19799313fba6e-299x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Thistle in Bloom"
+        },
+        {
+          "_key": "7afab8d4d705",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 12, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b4c2707bde24e3c8a2bc63831f4ee8457b514ade-320x314-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Tulip in Early Snow"
+        },
+        {
+          "_key": "1d55d3c1b02b",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 16, "width": 20 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bb4bf7c31588be7e464d5d5f42f0574110331d7a-319x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rising Sprout"
+        },
+        {
+          "_key": "1dbc47132629",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-eba3f25c2d847f54533431f259fece75f847290a-714x568-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Bromeliad Blooms"
+        },
+        {
+          "_key": "d98c8e4afac7",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8d56fc3bac0f6e09ce545f7f7f58c45602c43967-320x224-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Floating Conchs"
+        },
+        {
+          "_key": "a9fa594280da",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a32a88ce58a63a1893c0375a4385e3f98cb8e958-320x231-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Chambered Nautilus"
+        },
+        {
+          "_key": "759070179506",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1065b39ded25d3608265cc2bd5f5d66c8ed8c6e6-320x234-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Seashell at Moonrise"
+        },
+        {
+          "_key": "f02aef679a3d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 18 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1d5dc647c4dc3d03fba70fbae2ce17a6754ed8e3-320x209-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Mother Conch"
+        },
+        {
+          "_key": "63e42f97dc76",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-592a48202ebdbeba5586a93e688765f160d9ea27-320x252-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Phalaenopsis"
+        },
+        {
+          "_key": "bc8d2c46df6d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e3db9fb4c5a1b4e8b28db23bcecb00598f05538f-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Fuchsia"
+        },
+        {
+          "_key": "6b730dcb5a7d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 18, "width": 24 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2a16ba6bfeb90c8ea5ffc45984bf28c263d53474-320x240-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Autumn Trees Riverside"
+        },
+        {
+          "_key": "be814d1cd8d3",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4e3d60942b43bda171276c66494b73f2bb268b4c-240x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Egrets Over Sunrise Sea"
+        },
+        {
+          "_key": "623e27b94e0d",
+          "_type": "painting",
+          "dimensions": { "depth": 1.25, "height": 14, "width": 16 },
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-255096d6fba01ba923b14ca76926f47c5629a7db-221x320-jpg",
+              "_type": "reference"
+            }
+          },
+          "name": "Rain and Resting Damselflies"
+        }
+      ]
+    }
+  ]
+}
