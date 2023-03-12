@@ -1,11 +1,10 @@
 import ArtCard from "../../../components/ArtCard";
-import { client } from "../lib/client";
 
-const Embers = () => {
+const Greenfield = () => {
   return (
     <div className="page-container">
-      <h1>Embers Series</h1>
-      <p>Brief description of Embers</p>
+      <h1>Greenfield Series</h1>
+      <p>Brief description of Greenfield</p>
       <div className="art-card-grid">
         <ArtCard></ArtCard>
         <ArtCard></ArtCard>
@@ -22,4 +21,4 @@ const Embers = () => {
   );
 };
 
-export default Embers;
+export default Greenfield;
