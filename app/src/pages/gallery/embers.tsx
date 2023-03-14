@@ -1,5 +1,19 @@
 import ArtCard from "../../../components/ArtCard";
-import { client } from "../lib/client";
+import { groq } from "next-sanity";
+import { GetStaticProps } from "next";
+
+// import { client } from "../lib/client";
+import { nextSanityClient } from "../../../lib/client";
+
+export const getStaticProps: GetStaticProps = async ({}) => {
+  const res = await nextSanityClient.fetch(groq`*[_type == 'series'] { _id }`);
+  console.log(res);
+  //   const data = await JSON.parse(res.data);
+
+  return {
+    props: { seriesData: res },
+  };
+};
 
 const Embers = () => {
   return (
