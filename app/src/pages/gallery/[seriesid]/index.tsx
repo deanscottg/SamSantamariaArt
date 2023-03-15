@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       image{
         asset->{
           ...,
-        metadata
+          metadata
         }
     },
       dimensions[]{

@@ -6,7 +6,6 @@ import { useNextSanityImage as useSanityImage } from "next-sanity-image";
 
 type Props = { paintingData: Painting };
 const ArtCard = ({ paintingData }: Props) => {
-  console.log(paintingData.image.asset);
   //   const imageProps = useSanityImage(sClient, paintingData.image.asset._id);
 
   return (
