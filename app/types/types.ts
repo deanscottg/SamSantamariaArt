@@ -122,6 +122,6 @@ export interface Series {
   _rev?: string;
   _type?: string;
   _updatedAt?: string;
-  name: string;
-  paintings: Painting[];
+  name?: string;
+  paintings?: Painting[];
 }

@@ -50,7 +50,6 @@ const PaintingNav = ({ seriesData }: { seriesData: Series[] }) => {
             {series.name}
           </Link>
         ))}
-        ;
       </ul>
     </div>
   );
