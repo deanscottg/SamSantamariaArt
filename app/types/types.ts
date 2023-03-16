@@ -1,127 +1,36 @@
-export interface Painting {
-  dimensions: Dimension[];
-  image: Image;
-  name: string;
-}
+import { z } from "zod";
+import {
+  assetSchema,
+  darkMutedSchema,
+  darkVibrantSchema,
+  dimensionSchema,
+  dimensionsSchema,
+  dominantSchema,
+  imageSchema,
+  lightMutedSchema,
+  lightVibrantSchema,
+  metadataSchema,
+  mutedSchema,
+  paintingSchema,
+  paletteSchema,
+  photoSchema,
+  seriesSchema,
+  vibrantSchema,
+} from "./zodSchemas";
 
-export interface Dimension {
-  depth: number;
-  height: number;
-  width: number;
-}
-
-export interface Image {
-  asset: Asset;
-}
-
-export interface Asset {
-  _createdAt: string;
-  _id: string;
-  _rev: string;
-  _type: string;
-  _updatedAt: string;
-  assetId: string;
-  extension: string;
-  metadata: Metadata;
-  mimeType: string;
-  originalFilename: string;
-  path: string;
-  sha1hash: string;
-  size: number;
-  uploadId: string;
-  url: string;
-}
-
-export interface Metadata {
-  _type: string;
-  blurHash: string;
-  dimensions: Dimensions;
-  hasAlpha: boolean;
-  isOpaque: boolean;
-  lqip: string;
-  palette: Palette;
-}
-
-export interface Dimensions {
-  _type: string;
-  aspectRatio: number;
-  height: number;
-  width: number;
-}
-
-export interface Palette {
-  _type: string;
-  darkMuted: DarkMuted;
-  darkVibrant: DarkVibrant;
-  dominant: Dominant;
-  lightMuted: LightMuted;
-  lightVibrant: LightVibrant;
-  muted: Muted;
-  vibrant: Vibrant;
-}
-
-export interface DarkMuted {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface DarkVibrant {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface Dominant {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface LightMuted {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface LightVibrant {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface Muted {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface Vibrant {
-  _type: string;
-  background: string;
-  foreground: string;
-  population: number;
-  title: string;
-}
-
-export interface Series {
-  _createdAt?: string;
-  _id?: string;
-  _rev?: string;
-  _type?: string;
-  _updatedAt?: string;
-  name?: string;
-  paintings?: Painting[];
-}
+export type Dimension = z.infer<typeof dimensionSchema>;
+export type Dimensions = z.infer<typeof dimensionsSchema>;
+export type DarkMuted = z.infer<typeof darkMutedSchema>;
+export type DarkVibrant = z.infer<typeof darkVibrantSchema>;
+export type Dominant = z.infer<typeof dominantSchema>;
+export type LightMuted = z.infer<typeof lightMutedSchema>;
+export type LightVibrant = z.infer<typeof lightVibrantSchema>;
+export type MutedSchema = z.infer<typeof mutedSchema>;
+export type Vibrant = z.infer<typeof vibrantSchema>;
+export type Palette = z.infer<typeof paletteSchema>;
+export type MetadataSchema = z.infer<typeof metadataSchema>;
+export type Asset = z.infer<typeof assetSchema>;
+export type Image = z.infer<typeof imageSchema>;
+export type Painting = z.infer<typeof paintingSchema>;
+export type Series = z.infer<typeof seriesSchema>;
+export type Photo = z.infer<typeof photoSchema>;

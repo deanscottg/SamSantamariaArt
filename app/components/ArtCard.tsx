@@ -1,8 +1,6 @@
 import NextImage from "next/image";
 import Link from "next/link";
 import { Painting, Dimension, Image, Asset } from "../types/types";
-import { sClient } from "../lib/client";
-import { useNextSanityImage as useSanityImage } from "next-sanity-image";
 
 type Props = { paintingData: Painting };
 const ArtCard = ({ paintingData }: Props) => {

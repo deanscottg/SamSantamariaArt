@@ -3,15 +3,33 @@ import ArtCard from "../../../../components/ArtCard";
 import { groq } from "next-sanity";
 import { nextSanityClient } from "../../../../lib/client";
 import { Series } from "../../../../types/types";
+import { seriesSchema } from "../../../../types/zodSchemas";
+import { z } from "zod";
 
-interface Path {
-  _id: string;
-}
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await nextSanityClient.fetch(groq`*[_type == 'series'] { _id }`);
+  const pathsData = z
+    .array(
+      z.object({
+        _id: z.string(),
+      })
+    )
+    .parse(res);
+
+  const paths = pathsData.map((series) => {
+    return { params: { seriesid: series._id } };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params?.seriesid) return { notFound: true };
 
-  const seriesData = await nextSanityClient.fetch(
+  const seriesDataResponse = await nextSanityClient.fetch(
     groq`*[_id == '${params.seriesid}'][0]{
     name,
     paintings[]->{
@@ -31,30 +49,37 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }`
   );
 
+  const seriesData = seriesSchema
+    // Removing these fields from the schema
+    // Not testing data response for these fields
+    .omit({
+      _createdAt: true,
+      _rev: true,
+      _type: true,
+      _id: true,
+      _updatedAt: true,
+    })
+    // Verifying the data from the api
+    .parse(seriesDataResponse);
+
   return {
+    // Returing clean data
     props: { seriesData },
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const res: Path[] = await nextSanityClient.fetch(
-    groq`*[_type == 'series'] { _id }`
-  );
-  const paths = res.map((series) => {
-    return { params: { seriesid: series._id } };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-const Seriesid = ({ seriesData }: { seriesData: Series }) => {
+const Seriesid = ({
+  seriesData,
+}: {
+  seriesData: Omit<
+    Series,
+    "_createdAt" | "_rev" | "_type" | "_id" | "_updatedAt"
+  >;
+}) => {
   return (
     <div className="page-container">
       <h1>{seriesData.name}</h1>
-
-      <p>Brief description of Embers</p>
+      <p>Brief description of {seriesData.name}</p>
       <div className="art-card-grid">
         {seriesData.paintings.map((painting, i) => (
           <ArtCard paintingData={painting} key={i} />
