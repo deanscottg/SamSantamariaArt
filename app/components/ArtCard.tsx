@@ -20,15 +20,6 @@ const ArtCard = ({ paintingData }: Props) => {
           blurDataURL={paintingData.image.asset.metadata.lqip}
         />
         <h2>{paintingData.name}</h2>
-        {paintingData.dimensions.map((dimension) => {
-          return (
-            <>
-              <p>{dimension.height} in.</p>
-              <p>{dimension.width} in.</p>
-              <p>{dimension.depth}in.</p>
-            </>
-          );
-        })}
       </Link>
     </div>
   );
