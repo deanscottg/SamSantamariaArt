@@ -1,17 +1,29 @@
-import Image from "next/image";
+import NextImage from "next/image";
 import Link from "next/link";
-const ArtCard = () => {
-    return (
-        <div className="art-card">
-            <Link href='/artItemPage'>
-                <Image alt="squidward" src="/squidward.jpg" width={275} height={475}/>
-                <h2>Painting name</h2>
-                <p>
-                    This is all the info about this painting
-                </p>
-            </Link>
-        </div>
-    );
-}
- 
+import { Painting, Dimension, Image, Asset } from "../types/types";
+
+type Props = { paintingData: Painting };
+const ArtCard = ({ paintingData }: Props) => {
+  //   const imageProps = useSanityImage(sClient, paintingData.image.asset._id);
+
+  return (
+    <div className="art-card">
+      <Link href="/artItemPage">
+        <NextImage
+          alt={paintingData.name}
+          src={paintingData.image.asset.url}
+          width={paintingData.image.asset.metadata.dimensions.width}
+          height={paintingData.image.asset.metadata.dimensions.height}
+          placeholder="blur"
+          blurDataURL={paintingData.image.asset.metadata.lqip}
+        />
+        <h2>{paintingData.name}</h2>
+      </Link>
+    </div>
+  );
+};
+
 export default ArtCard;
+function useNextSanityImage() {
+  throw new Error("Function not implemented.");
+}

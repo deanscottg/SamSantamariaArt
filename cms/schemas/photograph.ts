@@ -9,7 +9,7 @@
 import dimensions from './dimensions'
 const required = (Rule) => Rule.required().warning('This field is required to upload a new Photo')
 export default {
-  name: 'photogrpah',
+  name: 'photograph',
   type: 'document',
   title: 'Photograph',
   fields: [

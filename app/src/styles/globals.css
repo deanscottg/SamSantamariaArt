@@ -30,10 +30,10 @@
     @apply flex justify-between text-white text-lg hover:text-indigo-400 hover:font-extrabold  hover:italic border-r-transparent relative rounded-lg;
   }
   .art-card {
-    @apply flex flex-col items-center hover:scale-105 duration-200;
+    @apply flex flex-col items-center hover:scale-105 duration-150;
   }
   .art-card-grid {
-    @apply pt-20 m-auto grid grid-cols-3 gap-8;
+    @apply pt-28 m-auto grid grid-cols-3 gap-12;
   }
   .page-container {
     @apply text-center space-y-3;
