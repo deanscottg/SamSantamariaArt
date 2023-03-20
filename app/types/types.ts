@@ -9,6 +9,7 @@ import {
   imageSchema,
   lightMutedSchema,
   lightVibrantSchema,
+  mergedSeriesSchema,
   metadataSchema,
   mutedSchema,
   paintingSchema,
@@ -34,3 +35,4 @@ export type Image = z.infer<typeof imageSchema>;
 export type Painting = z.infer<typeof paintingSchema>;
 export type Series = z.infer<typeof seriesSchema>;
 export type Photo = z.infer<typeof photoSchema>;
+export type MergedSeries = z.infer<typeof mergedSeriesSchema>;

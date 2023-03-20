@@ -3,8 +3,30 @@ import ArtCard from "../../../../components/ArtCard";
 import { groq } from "next-sanity";
 import { nextSanityClient } from "../../../../lib/client";
 import { Series } from "../../../../types/types";
-import { seriesSchema } from "../../../../types/zodSchemas";
+import {
+  seriesSchema,
+  dimensionSchema,
+  imageSchema,
+} from "../../../../types/zodSchemas";
 import { z } from "zod";
+
+const paintingSchema = z.object({
+  _id: z.string().optional(),
+  name: z.string(),
+  dimensions: z.array(dimensionSchema),
+  image: imageSchema,
+});
+const ommittedSeriesSchema = z.object({
+  _createdAt: z.string().optional(),
+  _id: z.string(),
+  _rev: z.string().optional(),
+  _type: z.string().optional(),
+  _updatedAt: z.string().optional(),
+  name: z.string(),
+  paintings: z.array(paintingSchema),
+});
+
+const mergedSeriesSchema = ommittedSeriesSchema.merge(paintingSchema);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await nextSanityClient.fetch(groq`*[_type == 'series'] { _id }`);
@@ -48,8 +70,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 }`
   );
+  console.log(params.seriesid, "test");
+  console.log(seriesDataResponse, "check");
 
-  const seriesData = seriesSchema
+  const seriesData = mergedSeriesSchema
     // Removing these fields from the schema
     // Not testing data response for these fields
     .omit({

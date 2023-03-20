@@ -113,10 +113,14 @@ export const imageSchema = z.object({
 });
 
 export const paintingSchema = z.object({
-  _id: z.string(),
+  _createdAt: z.string(),
+  _rev: z.string(),
+  _updatedAt: z.string(),
+  _type: z.string(),
+  _id: z.string().optional(),
+  name: z.string(),
   dimensions: z.array(dimensionSchema),
   image: imageSchema,
-  name: z.string(),
 });
 
 export const seriesSchema = z.object({
@@ -128,6 +132,8 @@ export const seriesSchema = z.object({
   name: z.string(),
   paintings: z.array(paintingSchema),
 });
+
+// export const mergedSeriesSchema = seriesSchema.merge(paintingSchema);
 
 export const photoSchema = z.object({
   _createdAt: z.string(),
