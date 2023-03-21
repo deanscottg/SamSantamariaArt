@@ -8,7 +8,7 @@ const ArtCard = ({ paintingData }: Props) => {
 
   return (
     <div className="art-card">
-      <Link href="/artItemPage">
+      <Link href={"/paintings/" + paintingData._id}>
         <NextImage
           alt={paintingData.name}
           src={paintingData.image.asset.url}
