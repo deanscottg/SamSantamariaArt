@@ -18,6 +18,8 @@ import {
   vibrantSchema,
 } from "./zodSchemas";
 
+export type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
+
 export type Dimension = z.infer<typeof dimensionSchema>;
 export type Dimensions = z.infer<typeof dimensionsSchema>;
 export type DarkMuted = z.infer<typeof darkMutedSchema>;

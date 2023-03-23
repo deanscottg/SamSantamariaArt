@@ -1,8 +1,14 @@
 import NextImage from "next/image";
 import Link from "next/link";
-import { Painting, Series } from "../types/types";
+import { Painting, Series, WithRequired } from "../types/types";
+import { paintingSchema } from "../types/zodSchemas";
+import z from "zod";
 
-type Props = { paintingData: Painting; seriesData: Series };
+type Props = {
+  paintingData: WithRequired<Painting, "_id">;
+  seriesData: WithRequired<Series, "_id">;
+};
+
 const ArtCard = ({ paintingData, seriesData }: Props) => {
   //   const imageProps = useSanityImage(sClient, paintingData.image.asset._id);
 

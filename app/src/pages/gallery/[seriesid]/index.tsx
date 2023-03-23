@@ -36,8 +36,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const seriesDataResponse = await nextSanityClient.fetch(
     groq`*[_id == '${params.seriesid}'][0]{
+	_id,
     name,
     paintings[]->{
+	_id,
       name,
       image{
         asset->{
@@ -56,7 +58,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   console.log(params.seriesid, "seriesId");
   console.log(seriesDataResponse, "Data");
 
-  const seriesData = seriesSchema.parse(seriesDataResponse);
+  const seriesData = seriesSchema
+    .required({
+      _id: true,
+    })
+    .parse(seriesDataResponse);
 
   return {
     // Returing clean data
