@@ -8,7 +8,9 @@ import { z } from "zod";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paintingsRes = await nextSanityClient.fetch(
-    groq`*[_type == 'painting']{ _id }`
+    groq`*[_type == 'painting']{
+  _id
+}`
   );
   const paintingPathsData = z
     .array(
@@ -16,11 +18,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
         _id: z.string(),
       })
     )
+
     .parse(paintingsRes);
 
   const paintingPaths = paintingPathsData.map((painting) => {
-    return { params: { paintingsid: painting._id, seriesid: series._id } };
+    return { params: { paintingsid: painting._id } };
   });
+  console.log(paintingPaths, "painting paths");
   return {
     paintingPaths,
     fallback: false,

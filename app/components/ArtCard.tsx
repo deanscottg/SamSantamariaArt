@@ -1,14 +1,17 @@
 import NextImage from "next/image";
 import Link from "next/link";
-import { Painting, Dimension, Image, Asset } from "../types/types";
+import { Painting, Series } from "../types/types";
 
-type Props = { paintingData: Painting };
-const ArtCard = ({ paintingData }: Props) => {
+type Props = { paintingData: Painting; seriesData: Series };
+const ArtCard = ({ paintingData, seriesData }: Props) => {
   //   const imageProps = useSanityImage(sClient, paintingData.image.asset._id);
 
   return (
     <div className="art-card">
-      <Link href={"/paintings/" + paintingData._id}>
+      <Link
+        key={paintingData._id}
+        href={"/gallery/" + seriesData._id + "/" + paintingData._id}
+      >
         <NextImage
           alt={paintingData.name}
           src={paintingData.image.asset.url}

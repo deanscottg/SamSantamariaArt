@@ -5,39 +5,37 @@ import ArtCard from "../../../../components/ArtCard";
 import { nextSanityClient } from "../../../../lib/client";
 import { Series } from "../../../../types/types";
 import {
-	dimensionSchema,
-	imageSchema,
-	paintingSchema,
-	seriesSchema,
+  dimensionSchema,
+  imageSchema,
+  paintingSchema,
+  seriesSchema,
 } from "../../../../types/zodSchemas";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const res = await nextSanityClient.fetch(
-		groq`*[_type == 'series'] { _id }`
-	);
-	const pathsData = z
-		.array(
-			z.object({
-				_id: z.string(),
-			})
-		)
-		.parse(res);
+  const res = await nextSanityClient.fetch(groq`*[_type == 'series'] { _id }`);
+  const pathsData = z
+    .array(
+      z.object({
+        _id: z.string(),
+      })
+    )
+    .parse(res);
 
-	const paths = pathsData.map((series) => {
-		return { params: { seriesid: series._id } };
-	});
+  const paths = pathsData.map((series) => {
+    return { params: { seriesid: series._id } };
+  });
 
-	return {
-		paths,
-		fallback: false,
-	};
+  return {
+    paths,
+    fallback: false,
+  };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	if (!params?.seriesid) return { notFound: true };
+  if (!params?.seriesid) return { notFound: true };
 
-	const seriesDataResponse = await nextSanityClient.fetch(
-		groq`*[_id == '${params.seriesid}'][0]{
+  const seriesDataResponse = await nextSanityClient.fetch(
+    groq`*[_id == '${params.seriesid}'][0]{
     name,
     paintings[]->{
       name,
@@ -54,37 +52,37 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     }
 }`
-	);
-	console.log(params.seriesid, "seriesId");
-	console.log(seriesDataResponse, "Data");
+  );
+  console.log(params.seriesid, "seriesId");
+  console.log(seriesDataResponse, "Data");
 
-	const seriesData = seriesSchema.parse(seriesDataResponse);
+  const seriesData = seriesSchema.parse(seriesDataResponse);
 
-	return {
-		// Returing clean data
-		props: { seriesData },
-	};
+  return {
+    // Returing clean data
+    props: { seriesData },
+  };
 };
 
 const Seriesid = ({
-	seriesData,
+  seriesData,
 }: {
-	seriesData: Omit<
-		Series,
-		"_createdAt" | "_rev" | "_type" | "_id" | "_updatedAt"
-	>;
+  seriesData: Omit<
+    Series,
+    "_createdAt" | "_rev" | "_type" | "_id" | "_updatedAt"
+  >;
 }) => {
-	return (
-		<div className="page-container">
-			<h1>{seriesData.name}</h1>
-			<p>Brief description of {seriesData.name}</p>
-			<div className="art-card-grid">
-				{seriesData.paintings.map((painting, i) => (
-					<ArtCard paintingData={painting} key={i} />
-				))}
-			</div>
-		</div>
-	);
+  return (
+    <div className="page-container">
+      <h1>{seriesData.name}</h1>
+      <p>Brief description of {seriesData.name}</p>
+      <div className="art-card-grid">
+        {seriesData.paintings.map((painting, i) => (
+          <ArtCard seriesData={seriesData} paintingData={painting} key={i} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Seriesid;
