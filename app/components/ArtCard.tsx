@@ -14,10 +14,7 @@ const ArtCard = ({ paintingData, seriesId }: Props) => {
 
   return (
     <div className="art-card">
-      <Link
-        key={paintingData._id}
-        href={"/gallery/" + seriesId + "/" + paintingData._id}
-      >
+      <Link key={paintingData._id} href={"/gallery/" + paintingData._id}>
         <NextImage
           alt={paintingData.name}
           src={paintingData.image.asset.url}
