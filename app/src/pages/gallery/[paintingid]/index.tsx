@@ -8,39 +8,36 @@ import { paintingSchema } from "../../../../types/zodSchemas";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paintingsRes = await nextSanityClient.fetch(
-    groq`*[_type == 'series']{
-    _id,
-    paintings[]->{
-      _id
-    }
-}`
+    groq`*[_type == 'painting']{
+    _id
+  }`
   );
   const paintingPathsData = z
     .array(
       z.object({
         _id: z.string(),
-        paintings: z.array(
-          z.object({
-            _id: z.string(),
-          })
-        ),
       })
     )
 
     .parse(paintingsRes);
 
-  const paths = paintingPathsData
-    .map((seriesData) => {
-      return seriesData.paintings.map((painting) => {
-        return {
-          params: {
-            seriesid: seriesData._id,
-            paintingid: painting._id,
-          },
-        };
-      });
-    })
-    .flat();
+  // const paths = paintingPathsData
+  //   .map((seriesData) => {
+  //     return seriesData.paintings.map((painting) => {
+  //       return {
+  //         params: {
+  //           seriesid: seriesData._id,
+  //           paintingid: painting._id,
+  //         },
+  //       };
+  //     });
+  //   })
+  //   .flat();
+
+  // console.log("painting paths", paths);
+  const paths = paintingPathsData.map((painting) => {
+    return { params: { paintingid: painting._id } };
+  });
 
   console.log("painting paths", paths);
   return {
