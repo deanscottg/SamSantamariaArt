@@ -2,9 +2,9 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { groq } from "next-sanity";
 import Image from "next/image";
 import { z } from "zod";
-import { nextSanityClient } from "../../../../lib/client";
-import { Painting } from "../../../../types/types";
-import { paintingSchema } from "../../../../types/zodSchemas";
+import { nextSanityClient } from "../../../lib/client";
+import { Painting } from "../../../types/types";
+import { paintingSchema } from "../../../types/zodSchemas";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paintingsRes = await nextSanityClient.fetch(
@@ -21,25 +21,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     .parse(paintingsRes);
 
-  // const paths = paintingPathsData
-  //   .map((seriesData) => {
-  //     return seriesData.paintings.map((painting) => {
-  //       return {
-  //         params: {
-  //           seriesid: seriesData._id,
-  //           paintingid: painting._id,
-  //         },
-  //       };
-  //     });
-  //   })
-  //   .flat();
-
-  // console.log("painting paths", paths);
   const paths = paintingPathsData.map((painting) => {
     return { params: { paintingid: painting._id } };
   });
 
-  console.log("painting paths", paths);
+  // console.log("painting paths", paths);
   return {
     paths,
     fallback: false,

@@ -11,10 +11,9 @@ type Props = {
 
 const ArtCard = ({ paintingData, seriesId }: Props) => {
   //   const imageProps = useSanityImage(sClient, paintingData.image.asset._id);
-
   return (
     <div className="art-card">
-      <Link key={paintingData._id} href={"/gallery/" + paintingData._id}>
+      <Link key={paintingData._id} href={"/paintings/" + paintingData._id}>
         <NextImage
           alt={paintingData.name}
           src={paintingData.image.asset.url}
