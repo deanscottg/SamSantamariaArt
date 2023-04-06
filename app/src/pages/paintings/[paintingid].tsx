@@ -25,7 +25,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     return { params: { paintingid: painting._id } };
   });
 
-  // console.log("painting paths", paths);
   return {
     paths,
     fallback: false,

@@ -53,7 +53,7 @@ const Photograph = ({
       </p>
       <div className="art-card-grid">
         {photoData.map((photo) => {
-          return <PhotoCard key={photo._id} data={photo} />;
+          return <PhotoCard key={photo._id} photoData={photo} />;
         })}
       </div>
     </div>
