@@ -81,10 +81,18 @@ const PaintingId = ({
           blurDataURL={paintingsData.image.asset.metadata.lqip}
         />
 
-        <p className="italic">
+        <p className="italic pt-8">
           Availbale as: Original | Limited Edition Print{" "}
         </p>
-        <p>Sizes offered: </p>
+        <p>Dimensions offered: </p>
+        <ul>
+          {paintingsData.dimensions.map((dimension) => (
+            <p key={paintingsData.name}>
+              {dimension.height} x {dimension.width} x {dimension.depth}{" "}
+              (inches)
+            </p>
+          ))}
+        </ul>
       </div>
     </div>
   );
