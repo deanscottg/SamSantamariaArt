@@ -1,4 +1,5 @@
 import React from "react";
+import { ZodError, ZodIssue } from "zod";
 
 interface InputProps {
   id: string;
@@ -11,8 +12,7 @@ interface InputProps {
       | React.ChangeEvent<HTMLInputElement>
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
-  error: boolean;
-  errorMessage: string | undefined;
+  errors: ZodError | null;
 }
 
 const Input = ({
@@ -22,8 +22,7 @@ const Input = ({
   placeholder,
   value,
   onChange,
-  error,
-  errorMessage = "",
+  errors,
   ...props
 }: InputProps) => {
   return (
@@ -42,8 +41,12 @@ const Input = ({
         className="w-full placeholder-gray-500 border-gray-500 border-opacity-50 rounded-md focus:ring-2 focus:ring-gray-600 "
         {...props}
       />
-      {error ? (
-        <p className="text-red-500 italic text-sm">*{errorMessage}</p>
+      {errors &&
+      errors.errors.findIndex((error: ZodIssue) => error.path.includes(name)) >
+        -1 ? (
+        <p className="text-red-500 italic text-sm">
+          {errors?.flatten().fieldErrors[name]?.join("")}
+        </p>
       ) : null}
     </div>
   );

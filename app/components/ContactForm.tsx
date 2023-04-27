@@ -3,6 +3,21 @@ import Input from "./Input";
 import TextArea from "./Textarea";
 import { validate } from "../utils/validate";
 ("use client");
+import zod, { ZodError } from "zod";
+
+const formSchema = zod.object({
+  name: zod.string({
+    required_error: "Name is required",
+  }),
+  email: zod
+    .string({
+      required_error: "Email is required",
+    })
+    .email("Invalid Email Address"),
+  message: zod.string({
+    required_error: "Messsage is required",
+  }),
+});
 
 interface IValues {
   name: string;
@@ -17,22 +32,21 @@ export const ContactForm = () => {
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState<IErrors>({});
-  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<ZodError | null>(null);
+  // const [loading, setLoading] = useState(false);
   //   const [name, setName] = useState("");
   //   const [email, setEmail] = useState("");
   //   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const errors = validate(values);
-    const isError = Object.keys(errors).length;
-    if (isError && isError > 0) {
-      setErrors(errors);
+    const result = formSchema.safeParse(values);
+    if (!result.success) {
+      setErrors(result.error);
       return;
     }
 
-    console.log(values);
+    console.log(result.data);
   };
 
   const onChange = (
@@ -51,8 +65,7 @@ export const ContactForm = () => {
           className="flex flex-col items-center mx-auto w-1/3"
         >
           <Input
-            error={!!errors.name}
-            errorMessage={errors.name}
+            errors={errors}
             value={values.name}
             onChange={onChange}
             id="name"
@@ -61,8 +74,7 @@ export const ContactForm = () => {
             label="Your Name"
           />
           <Input
-            error={!!errors.email}
-            errorMessage={!!errors.email ? errors.email : ""}
+            errors={errors}
             value={values.email}
             onChange={onChange}
             id="email"
@@ -71,8 +83,7 @@ export const ContactForm = () => {
             label="Your Email"
           />
           <TextArea
-            error={!!errors.message}
-            errorMessage={errors.message}
+            errors={errors}
             value={values.message}
             onChange={onChange}
             id="message"
