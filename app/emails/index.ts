@@ -1,8 +1,8 @@
-import { SESClient, CloneReceiptRuleSetCommand } from "@aws-sdk/client-ses";
+import * as aws from "@aws-sdk/client-ses";
 import nodemailer from "nodemailer";
 import { buildSendMail } from "mailing-core";
 
-const client = new SESClient({
+const client = new aws.SES({
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID || "",
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "",
@@ -12,7 +12,7 @@ const client = new SESClient({
 });
 
 const transport = nodemailer.createTransport({
-  SES: { client, SESClient },
+  SES: { client, aws },
 });
 
 const sendMail = buildSendMail({

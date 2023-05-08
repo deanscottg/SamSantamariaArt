@@ -4,6 +4,7 @@ import TextArea from "./Textarea";
 import { validate } from "../utils/validate";
 ("use client");
 import zod, { ZodError } from "zod";
+import axios from "axios";
 
 const formSchema = zod.object({
   name: zod.string({
@@ -40,13 +41,20 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Make api call to your email endpoint and pass the data in the call to the endpoint
+    // using the state values, pass the object as the body of the POST request to the email endpoint
     const result = formSchema.safeParse(values);
     if (!result.success) {
       setErrors(result.error);
       return;
     }
+    // Set loading state
 
-    console.log(result.data);
+    const emailResponse = await axios.post("/api/hello", {
+      ...values,
+    });
+    // Set success page
+    console.log(emailResponse);
   };
 
   const onChange = (

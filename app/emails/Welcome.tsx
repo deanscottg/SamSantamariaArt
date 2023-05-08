@@ -33,10 +33,12 @@ const welcomeStyle = `
 `;
 
 type WelcomeProps = {
-  includeUnsubscribe?: boolean;
+  name: string;
+  email: string;
+  message: string;
 };
 
-const Welcome = ({ includeUnsubscribe }: WelcomeProps) => {
+const Welcome = ({ name, email, message }: WelcomeProps) => {
   return (
     <BaseLayout width={600} style={welcomeStyle}>
       <Header />
@@ -44,9 +46,10 @@ const Welcome = ({ includeUnsubscribe }: WelcomeProps) => {
         <MjmlSection paddingBottom={spacing.s11} cssClass="gutter">
           <MjmlColumn>
             <Heading maxWidth={420} cssClass="h1" fontFamily={fontFamily.serif}>
-              Thank you <br />
+              {/* Thank you <br />
               for installing <br />
-              Mailing :)
+              Mailing :) */}
+              New art inquiry, Sam!
             </Heading>
           </MjmlColumn>
         </MjmlSection>
@@ -61,13 +64,11 @@ const Welcome = ({ includeUnsubscribe }: WelcomeProps) => {
               fontSize={fontSize.md}
               paddingBottom={spacing.s7}
             >
-              It shows previews from{" "}
-              <span className="code">emails/previews</span>. Keep it open while
-              you build your emails and it’ll live reload as you develop. To see
-              it in action with this preview, make a change to{" "}
-              <span className="code">emails/previews/Welcome.tsx</span>. You can
-              deploy your Mailing server to Vercel or Netlify to share the
-              Preview Viewer with your team.
+              Name: {name}
+              <br />
+              Email: {email}
+              <br />
+              message: {message}
             </Text>
 
             <Button
@@ -126,9 +127,8 @@ const Welcome = ({ includeUnsubscribe }: WelcomeProps) => {
           </MjmlColumn>
         </MjmlSection>
       </MjmlWrapper>
-      <Footer includeUnsubscribe={includeUnsubscribe} />
+      <Footer />
     </BaseLayout>
   );
 };
-Welcome.subject = "Thank you for installing Mailing :)";
 export default Welcome;
