@@ -5,6 +5,8 @@ import { validate } from "../utils/validate";
 ("use client");
 import zod, { ZodError } from "zod";
 import axios from "axios";
+import router from "next/router";
+import SubmitLoader from "./SubmitLoader";
 
 const formSchema = zod.object({
   name: zod.string({
@@ -33,6 +35,7 @@ export const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<ZodError | null>(null);
   // const [loading, setLoading] = useState(false);
   //   const [name, setName] = useState("");
@@ -46,15 +49,21 @@ export const ContactForm = () => {
     const result = formSchema.safeParse(values);
     if (!result.success) {
       setErrors(result.error);
+
       return;
     }
+
     // Set loading state
+    setIsSubmitting(true);
 
     const emailResponse = await axios.post("/api/hello", {
       ...values,
     });
     // Set success page
     console.log(emailResponse);
+    // {
+    emailResponse && router.push("/emailSuccessPage");
+    // }
   };
 
   const onChange = (
@@ -65,6 +74,7 @@ export const ContactForm = () => {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  if (isSubmitting) return <SubmitLoader />;
   return (
     <div className="w-full h-screen">
       <div className="px-3 pt-10 ">
@@ -101,7 +111,7 @@ export const ContactForm = () => {
           />
 
           <button
-            className="w-full py-2 mt-6 lext-lg bg-gray-500 rounded-md active:bg-indigo-400 focus:ring-2 focus:ring-indigo-300 outline-none"
+            className="w-full py-2 mt-6 lext-lg bg-gray-500 rounded-md active:bg-indigo-500 hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none"
             type="submit"
           >
             Submit
