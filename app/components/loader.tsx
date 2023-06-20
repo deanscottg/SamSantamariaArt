@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import LoaderSVG from "./svgs/Loadersvg";
+import LoaderSVG from "./svgs/LoaderSVG";
 
 const loader = () => {
   return (
