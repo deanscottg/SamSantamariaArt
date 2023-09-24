@@ -6,9 +6,9 @@
 // -- height
 // -- width
 
-import dimensions from './dimensions'
-const required = (Rule) => Rule.required().warning('This field is required')
-export default {
+import { defineType } from 'sanity'
+import { required } from '../utils'
+export const painting = defineType({
   name: 'painting',
   type: 'document',
   title: 'Painting',
@@ -26,6 +26,17 @@ export default {
       title: 'Painting Image',
       validation: required,
     },
+    {
+      name: 'images',
+      type: 'array',
+      title: 'Painting Image(s)',
+      of: [
+        {
+          type: 'image',
+        },
+      ],
+      validation: required,
+    },
 
     {
       name: 'dimensions',
@@ -38,4 +49,4 @@ export default {
       ],
     },
   ],
-}
+})
