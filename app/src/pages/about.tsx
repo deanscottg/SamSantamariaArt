@@ -1,6 +1,10 @@
+import Link from "next/link";
 import AboutScrollNav from "../../components/AboutScrollNav";
+import { useState } from "react";
+import SailorMoonPopUp from "../../components/SailorMoonPopUp";
 
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="page-container">
       <h1 className="py-10 text-center">About the Artist</h1>
@@ -70,6 +74,17 @@ const About = () => {
           <p className="p-4">
             SAILOR MOON - Stories, Poems, Photographs, 84 pp full color,
             published by AuthorHOUSE, 2019
+            <p>
+              <Link
+                onMouseEnter={() => setIsOpen(true)}
+                onMouseLeave={() => setIsOpen(false)}
+                className="painting-nav-link "
+                href="https://www.amazon.com/Sailor-Moon-Events-Comic-Sinister-ebook/dp/B07Z4KR5VN"
+              >
+                Learn more about it
+              </Link>
+            </p>
+            {isOpen && <SailorMoonPopUp />}
             <br></br>
             SARI MANOK – Legend, Art &amp; Haiku Lyric, 48 pp full color, soon
             to be published
