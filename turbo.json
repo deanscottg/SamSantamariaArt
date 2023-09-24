@@ -1,0 +1,25 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": ["**/.env.*local"],
+	"globalEnv": [
+		"AWS_ACCESS_KEY_ID",
+		"AWS_SECRET_ACCESS_KEY",
+		"AWS_SESSION_TOKEN"
+	],
+	"pipeline": {
+		"build": {
+			"outputs": [".next/**", "!.next/cache/**"]
+		},
+		"lint": {},
+		"deploy": {
+			"dependsOn": ["build", "test", "lint"]
+		},
+		"test": {
+			"dependsOn": ["build"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		}
+	}
+}
