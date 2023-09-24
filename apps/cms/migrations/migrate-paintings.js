@@ -53,7 +53,7 @@ const buildPatches = (paintings) =>
           {
             _key: Math.random().toString(36).substring(2, 9),
             _type: 'image',
-            asset: { ref: painting.image.asset._ref, _type: 'reference' },
+            asset: { _ref: painting.image.asset._ref, _type: 'reference' },
           },
         ],
       },
