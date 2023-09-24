@@ -1,0 +1,30 @@
+{
+	"name": "sam-santamaria-art",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"license": "ISC",
+	"author": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"prettier": {
+		"bracketSpacing": true,
+		"endOfLine": "lf",
+		"plugins": [
+			"prettier-plugin-packagejson"
+		],
+		"printWidth": 80,
+		"semi": true,
+		"singleQuote": false,
+		"tabWidth": 2,
+		"trailingComma": "es5",
+		"useTabs": true
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3",
+		"prettier-plugin-packagejson": "^2.4.5",
+		"typescript": "^5.2.2"
+	}
+}
