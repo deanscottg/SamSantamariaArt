@@ -1,18 +1,19 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
 import { createClient } from '@sanity/client'
 
-const token = process.env.SANITY_TOKEN
-const projectId = ''
+// const token = process.env.SANITY_TOKEN
+const projectId = '2b9gf9cl'
 const dataset = 'production'
-const apiVersion = '2023-03-01'
+// const apiVersion = '2023-03-01'
 
 const client = createClient({
-  apiVersion,
+  apiVersion: '2021-03-25',
   projectId,
   dataset,
-  token,
+  withCredentials: true,
 })
 
+console.log(client.config())
 // Run this script from within your project folder in your terminal with: `sanity exec --with-user-token migrations/renameField.js`
 //
 // This example shows how you may write a migration script that renames a field (name => fullname)
@@ -33,7 +34,7 @@ const client = createClient({
 // NOTE: This query should eventually return an empty set of documents to mark the migration
 // as complete
 const fetchDocuments = () =>
-  client.fetch(`*[_type == 'painting' && _id == "D6G21uALwZulTW2YSdkciA"][0...100] {
+  client.fetch(`*[_type == 'painting' && _id == "D6G21uALwZulTW2YSdkciA"] {
     _id, 
     _rev, 
     image, 
@@ -50,6 +51,7 @@ const buildPatches = (paintings) =>
         before: 'images[-1]',
         items: [
           {
+            _key: Math.random().toString(36).substring(2, 9),
             _type: 'image',
             asset: { ref: painting.image.asset._ref, _type: 'reference' },
           },
