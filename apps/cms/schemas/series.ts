@@ -1,6 +1,7 @@
-const required = (Rule) => Rule.required().warning('This field is required')
+import { defineType } from 'sanity'
+import { required } from '../utils'
 
-export default {
+export const series = defineType({
   name: 'series',
   type: 'document',
   title: 'Series',
@@ -28,4 +29,4 @@ export default {
       validation: required,
     },
   ],
-}
+})

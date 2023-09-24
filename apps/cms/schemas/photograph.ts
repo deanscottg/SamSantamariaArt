@@ -5,10 +5,10 @@
 // - dimensions
 // -- height
 // -- width
-
-import dimensions from './dimensions'
-const required = (Rule) => Rule.required().warning('This field is required to upload a new Photo')
-export default {
+import { required } from '../utils'
+import { defineType } from 'sanity'
+import { dimensions } from './dimensions'
+export const photograph = defineType({
   name: 'photograph',
   type: 'document',
   title: 'Photograph',
@@ -27,4 +27,4 @@ export default {
     },
     dimensions,
   ],
-}
+})
