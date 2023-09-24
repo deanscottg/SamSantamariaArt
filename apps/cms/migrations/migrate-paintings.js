@@ -12,6 +12,7 @@ const client = createClient({
   dataset,
   withCredentials: true,
 })
+console.log(client.config())
 
 console.log(client.config())
 // Run this script from within your project folder in your terminal with: `sanity exec --with-user-token migrations/renameField.js`
