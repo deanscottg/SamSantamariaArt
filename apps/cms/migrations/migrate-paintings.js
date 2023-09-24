@@ -1,7 +1,7 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
 import { createClient } from '@sanity/client'
 
-// const token = process.env.SANITY_TOKEN
+const token = process.env.SANITY_TOKEN
 const projectId = '2b9gf9cl'
 const dataset = 'production'
 // const apiVersion = '2023-03-01'
@@ -10,11 +10,11 @@ const client = createClient({
   apiVersion: '2021-03-25',
   projectId,
   dataset,
-  withCredentials: true,
+  token,
+  useCdn: false,
 })
 console.log(client.config())
 
-console.log(client.config())
 // Run this script from within your project folder in your terminal with: `sanity exec --with-user-token migrations/renameField.js`
 //
 // This example shows how you may write a migration script that renames a field (name => fullname)
