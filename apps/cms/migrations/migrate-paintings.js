@@ -35,7 +35,7 @@ console.log(client.config())
 // NOTE: This query should eventually return an empty set of documents to mark the migration
 // as complete
 const fetchDocuments = () =>
-  client.fetch(`*[_type == 'painting' && _id == "D6G21uALwZulTW2YSdkciA"][0..100] {
+  client.fetch(`*[_type == 'painting' && _id == "D6G21uALwZulTW2YSdkciA" && defined(images)][0..100] {
     _id, 
     _rev, 
     image, 
@@ -47,6 +47,7 @@ const buildPatches = (paintings) =>
     id: painting._id,
     patch: {
       setIfMissing: { images: [] },
+      unset: ['image'],
       insert: {
         before: 'images[-1]',
         items: [
