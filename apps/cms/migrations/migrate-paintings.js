@@ -35,7 +35,7 @@ console.log(client.config())
 // NOTE: This query should eventually return an empty set of documents to mark the migration
 // as complete
 const fetchDocuments = () =>
-  client.fetch(`*[_type == 'painting' && _id == "D6G21uALwZulTW2YSdkciA" && defined(image)][0..100] {
+  client.fetch(`*[_type == 'painting' && defined(image)][0..100] {
     _id, 
     _rev, 
     image, 
