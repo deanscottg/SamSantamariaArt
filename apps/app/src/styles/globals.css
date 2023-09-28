@@ -5,37 +5,37 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-6xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
-  }
-  /* p {
+	h1 {
+		@apply text-6xl font-bodoni font-extrabold antialiased hover:subpixel-antialiased;
+	}
+	/* p {
     @apply font-josefin;
   } */
-  body {
-    @apply min-h-screen flex flex-col bg-gradient-to-br from-gray-400 to-gray-200 font-josefin;
-  }
+	body {
+		@apply min-h-screen flex flex-col bg-gradient-to-br from-gray-400 to-gray-200 font-josefin;
+	}
 }
 
 @layer components {
-  .painting-nav-link {
-    @apply py-2 pl-3 pr-4 text-lg text-black hover:underline hover:text-indigo-500  md:bg-transparent md:text-black md:p-0 dark:text-white;
-  }
-  .footer-icon-btn {
-    @apply hover:scale-110 duration-300;
-  }
-  .nav-link-btn {
-    @apply bg-transparent text-center hover:text-indigo-400 hover:underline hover:font-extrabold text-white text-lg font-bold py-2 px-4 rounded-full;
-  }
-  .gallery-dropdown-item {
-    @apply flex justify-between text-white text-lg hover:text-indigo-400 hover:font-extrabold  hover:italic border-r-transparent relative rounded-lg;
-  }
-  .art-card {
-    @apply flex flex-col items-center hover:scale-105 duration-150;
-  }
-  .art-card-grid {
-    @apply pt-28 m-auto grid grid-cols-3 gap-12;
-  }
-  .page-container {
-    @apply text-center space-y-3;
-  }
+	.painting-nav-link {
+		@apply py-2 pl-3 pr-4 text-lg text-black hover:underline hover:text-indigo-500  md:bg-transparent md:text-black md:p-0 dark:text-white;
+	}
+	.footer-icon-btn {
+		@apply hover:scale-110 duration-300;
+	}
+	.nav-link-btn {
+		@apply bg-transparent text-center hover:text-indigo-400 hover:underline hover:font-extrabold hover:scale-125 text-white text-lg font-bold py-2 px-4 rounded-full;
+	}
+	.gallery-dropdown-item {
+		@apply flex justify-between text-white text-lg hover:text-indigo-400 hover:font-extrabold  hover:italic border-r-transparent relative rounded-lg;
+	}
+	.art-card {
+		@apply flex flex-col items-center hover:scale-105 duration-150;
+	}
+	.art-card-grid {
+		@apply pt-28 m-auto grid grid-cols-3 gap-12;
+	}
+	.page-container {
+		@apply text-center space-y-3;
+	}
 }
