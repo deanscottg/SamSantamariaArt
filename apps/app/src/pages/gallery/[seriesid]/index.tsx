@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     paintings[]->{
 	  _id,
       name,
-      image{
+      images[]{
         asset->{
           ...,
           metadata
@@ -67,7 +67,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 }`
 	);
-
 	const seriesData = seriesWithIdSchema.parse(seriesDataResponse);
 
 	return {

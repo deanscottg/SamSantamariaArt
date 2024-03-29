@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		groq`*[_id == '${params.paintingid}'][0]{
             _id,
             name,
-            image{
+            images[]{
                 asset->{
                     ...,
                     metadata,
