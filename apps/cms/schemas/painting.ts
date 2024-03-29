@@ -21,12 +21,6 @@ export const painting = defineType({
       validation: required,
     },
     {
-      name: 'image',
-      type: 'image',
-      title: 'Painting Image',
-      validation: required,
-    },
-    {
       name: 'images',
       type: 'array',
       title: 'Painting Image(s)',
