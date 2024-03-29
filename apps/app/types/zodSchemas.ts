@@ -120,7 +120,7 @@ export const paintingSchema = z.object({
 	_updatedAt: z.string().optional(),
 	name: z.string(),
 	dimensions: z.array(dimensionSchema),
-	image: imageSchema,
+	images: z.array(imageSchema).optional(),
 });
 
 export const seriesSchema = z.object({

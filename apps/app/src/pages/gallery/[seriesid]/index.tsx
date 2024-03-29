@@ -24,9 +24,7 @@ const seriesWithIdSchema = z.object({
 type SeriesWithId = z.infer<typeof seriesWithIdSchema>;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const res = await nextSanityClient.fetch(
-		groq`*[_type == 'series'] { _id }`
-	);
+	const res = await nextSanityClient.fetch(groq`*[_type == 'series'] { _id }`);
 	const pathsData = z
 		.array(
 			z.object({
@@ -85,11 +83,7 @@ const Seriesid = ({ seriesData }: { seriesData: SeriesWithId }) => {
 			<p>Brief description of {seriesData.name}</p>
 			<div className="art-card-grid">
 				{seriesData.paintings.map((painting, i) => (
-					<ArtCard
-						seriesId={seriesData._id}
-						paintingData={painting}
-						key={i}
-					/>
+					<ArtCard seriesId={seriesData._id} paintingData={painting} key={i} />
 				))}
 			</div>
 		</div>
