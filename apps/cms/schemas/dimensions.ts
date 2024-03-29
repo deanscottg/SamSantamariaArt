@@ -1,4 +1,6 @@
-export default {
+import { defineField, defineType } from 'sanity'
+
+export const dimensions = defineField({
   name: 'dimensions',
   type: 'object',
   title: 'Dimensions',
@@ -35,4 +37,4 @@ export default {
           .precision(2),
     },
   ],
-}
+})

@@ -8,6 +8,15 @@ importers:
 
   .:
     devDependencies:
+      '@babel/preset-env':
+        specifier: ^7.22.20
+        version: 7.22.20(@babel/core@7.22.20)
+      '@babel/preset-react':
+        specifier: ^7.22.15
+        version: 7.22.15(@babel/core@7.22.20)
+      eslint:
+        specifier: ^8.50.0
+        version: 8.50.0
       prettier:
         specifier: ^3.0.3
         version: 3.0.3
@@ -105,6 +114,9 @@ importers:
 
   apps/cms:
     dependencies:
+      '@sanity/client':
+        specifier: ^6.4.12
+        version: 6.4.12
       '@sanity/vision':
         specifier: ^3.16.7
         version: 3.16.7(@babel/runtime@7.22.15)(@codemirror/lint@6.4.2)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.1.0)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
@@ -124,6 +136,9 @@ importers:
         specifier: ^5.3.11
         version: 5.3.11(@babel/core@7.22.20)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
     devDependencies:
+      '@babel/preset-env':
+        specifier: ^7.22.20
+        version: 7.22.20(@babel/core@7.22.20)
       '@sanity/eslint-config-studio':
         specifier: ^3.0.1
         version: 3.0.1(eslint@8.50.0)(typescript@5.2.2)
