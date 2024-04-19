@@ -7,7 +7,7 @@ import { Painting } from "../../../types/types";
 import { paintingSchema } from "../../../types/zodSchemas";
 import { Carousel } from "@mantine/carousel";
 import { MantineProvider } from "@mantine/core";
-import classes from "../../styles/Carousel.module.css";
+// import classes from "../../styles/Carousel.module.css";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const paintingsRes = await nextSanityClient.fetch(
@@ -96,7 +96,7 @@ const PaintingId = ({
 						h={"75%"}
 						slideSize={"100%"}
 						withControls
-						classNames={classes}
+						// classNames={classes}
 					>
 						{/* <div className="flex flex-col items-center"> */}
 						{slides}
