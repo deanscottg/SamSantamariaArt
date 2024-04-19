@@ -5,6 +5,7 @@ import { z } from "zod";
 import { nextSanityClient } from "../../../lib/client";
 import { Painting } from "../../../types/types";
 import { paintingSchema } from "../../../types/zodSchemas";
+import { Carousel } from "@mantine/carousel";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const paintingsRes = await nextSanityClient.fetch(
@@ -71,7 +72,29 @@ const PaintingId = ({
 		<div className="page-container">
 			<h1>{paintingsData.name}</h1>
 			<div className="flex flex-col items-center">
-				{paintingsData.images && paintingsData.images[0] && (
+				<Carousel>
+					{/* <div className="flex flex-col items-center"> */}
+					{paintingsData.images?.map((image, i) => (
+						<Carousel.Slide key={i}>
+							<NextImage
+								alt={paintingsData.name}
+								src={paintingsData.images?.[i].asset.url}
+								width={
+									paintingsData.images?.[i].asset.metadata.dimensions.width
+								}
+								height={
+									paintingsData.images?.[i].asset.metadata.dimensions.height
+								}
+								placeholder="blur"
+								blurDataURL={paintingsData.images?.[i].asset.metadata.lqip}
+								className="pt-24"
+							/>
+						</Carousel.Slide>
+					))}
+				</Carousel>
+			</div>
+
+			{/* {paintingsData.images && paintingsData.images[0] && (
 					<NextImage
 						alt={paintingsData.name}
 						src={paintingsData.images[0].asset.url}
@@ -81,22 +104,21 @@ const PaintingId = ({
 						blurDataURL={paintingsData.images[0].asset.metadata.lqip}
 						className="pt-24"
 					/>
-				)}
+				)} */}
 
-				<p className="italic pt-8">
-					Availbale as: Original | Limited Edition Print{" "}
-				</p>
-				<p>Dimensions offered: </p>
-				<ul>
-					{paintingsData.dimensions.map((dimension) => (
-						<p key={paintingsData.name}>
-							{dimension.height} x {dimension.width} x {dimension.depth}{" "}
-							(inches)
-						</p>
-					))}
-				</ul>
-			</div>
+			<p className="italic pt-8">
+				Availbale as: Original | Limited Edition Print{" "}
+			</p>
+			<p>Dimensions offered: </p>
+			<ul>
+				{paintingsData.dimensions.map((dimension) => (
+					<p key={paintingsData.name}>
+						{dimension.height} x {dimension.width} x {dimension.depth} (inches)
+					</p>
+				))}
+			</ul>
 		</div>
+		// </div>
 	);
 };
 
