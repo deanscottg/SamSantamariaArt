@@ -1,5 +1,6 @@
-import "../styles/globals.css";
 import "@mantine/carousel/styles.css";
+import "@mantine/core/styles.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../../components/Layout";
 import Router from "next/router";

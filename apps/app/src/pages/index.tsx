@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import FeaturedItemsBanner from "../../components/FeaturedItemsBanner";
-import "@mantine/carousel/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -6,6 +6,7 @@ import { nextSanityClient } from "../../../lib/client";
 import { Painting } from "../../../types/types";
 import { paintingSchema } from "../../../types/zodSchemas";
 import { Carousel } from "@mantine/carousel";
+import { MantineProvider } from "@mantine/core";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const paintingsRes = await nextSanityClient.fetch(
@@ -68,30 +69,37 @@ const PaintingId = ({
 }: {
 	paintingsData: Omit<Painting, "_createdAt" | "_updatedAt" | "_type" | "_rev">;
 }) => {
+	const slides = paintingsData.images?.map((image, i) => (
+		<Carousel.Slide key={i}>
+			<NextImage
+				alt={paintingsData.name}
+				src={image.asset.url}
+				width={0}
+				height={0}
+				sizes={"100vw"}
+				placeholder="blur"
+				blurDataURL={image.asset.metadata.lqip}
+				className="pt-24 object-cover h-full w-full"
+			/>
+		</Carousel.Slide>
+	));
+
 	return (
 		<div className="page-container">
 			<h1>{paintingsData.name}</h1>
 			<div className="flex flex-col items-center">
-				<Carousel>
-					{/* <div className="flex flex-col items-center"> */}
-					{paintingsData.images?.map((image, i) => (
-						<Carousel.Slide key={i}>
-							<NextImage
-								alt={paintingsData.name}
-								src={paintingsData.images?.[i].asset.url}
-								width={
-									paintingsData.images?.[i].asset.metadata.dimensions.width
-								}
-								height={
-									paintingsData.images?.[i].asset.metadata.dimensions.height
-								}
-								placeholder="blur"
-								blurDataURL={paintingsData.images?.[i].asset.metadata.lqip}
-								className="pt-24"
-							/>
-						</Carousel.Slide>
-					))}
-				</Carousel>
+				<MantineProvider>
+					<Carousel
+						withIndicators
+						w={"40%"}
+						h={"75%"}
+						slideSize={"100%"}
+						withControls
+					>
+						{/* <div className="flex flex-col items-center"> */}
+						{slides}
+					</Carousel>
+				</MantineProvider>
 			</div>
 
 			{/* {paintingsData.images && paintingsData.images[0] && (
