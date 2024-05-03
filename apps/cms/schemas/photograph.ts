@@ -20,11 +20,25 @@ export const photograph = defineType({
       validation: required,
     },
     {
-      name: 'image',
-      type: 'image',
-      title: 'Photograph Image',
+      name: 'images',
+      type: 'array',
+      title: 'Photograph Image(s)',
+      of: [
+        {
+          type: 'image',
+        },
+      ],
       validation: required,
     },
-    dimensions,
+    {
+      name: 'dimensions',
+      title: 'Dimensions',
+      type: 'array',
+      of: [
+        {
+          type: 'dimensions',
+        },
+      ],
+    },
   ],
 })

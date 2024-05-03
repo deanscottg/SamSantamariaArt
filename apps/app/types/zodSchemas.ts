@@ -134,12 +134,12 @@ export const seriesSchema = z.object({
 });
 
 export const photoSchema = z.object({
-	_createdAt: z.string(),
-	_rev: z.string(),
-	_type: z.string(),
-	_updatedAt: z.string(),
-	_id: z.string(),
+	_createdAt: z.string().optional(),
+	_id: z.string().optional(),
+	_rev: z.string().optional(),
+	_type: z.string().optional(),
+	_updatedAt: z.string().optional(),
 	name: z.string(),
-	dimensions: dimensionSchema,
-	image: imageSchema,
+	dimensions: z.array(dimensionSchema),
+	images: z.array(imageSchema).optional(),
 });
