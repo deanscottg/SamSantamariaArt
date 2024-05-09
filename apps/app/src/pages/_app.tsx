@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<motion.div
 				initial={{ opacity: 0, y: 25 }}
 				animate={{ opacity: 1, y: 0 }}
-				exist={{ opacity: 0, y: 25 }}
+				exit={{ opacity: 0, y: 25 }}
 				transition={{ delay: 1 }}
 				className="bg-gradient-to-br from-gray-400 to-gray-200 bg-auto"
 			>
