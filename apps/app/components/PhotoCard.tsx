@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Photo, WithRequired } from "../types/types";
 
 type Props = {
-	photoData: WithRequired<Photo, "_id">;
-	// photoData: Omit<Photo, "_createdAt" | "_rev" | "_type" | "_updatedAt">;
+	// photoData: WithRequired<Photo, "_id">;
+	photoData: Omit<Photo, "_createdAt" | "_rev" | "_type" | "_updatedAt">;
 };
 
 const PhotoCard = ({ photoData }: Props) => {
