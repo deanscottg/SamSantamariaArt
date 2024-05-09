@@ -8,7 +8,7 @@ const SailorMoonPopUp = () => {
 		<motion.div
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1, y: 0 }}
-			exist={{ opacity: 0, y: 25 }}
+			exit={{ opacity: 0, y: 25 }}
 			transition={{ delay: 0.5 }}
 			className="grid place-items-center"
 		>
