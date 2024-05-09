@@ -5,6 +5,9 @@ import { z } from "zod";
 import { nextSanityClient } from "../../../lib/client";
 import { Painting } from "../../../types/types";
 import { paintingSchema } from "../../../types/zodSchemas";
+import { Carousel } from "@mantine/carousel";
+import { MantineProvider } from "@mantine/core";
+// import classes from "../../styles/Carousel.module.css";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const paintingsRes = await nextSanityClient.fetch(
@@ -38,7 +41,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		groq`*[_id == '${params.paintingid}'][0]{
             _id,
             name,
-            image{
+            images[]{
                 asset->{
                     ...,
                     metadata,
@@ -67,11 +70,41 @@ const PaintingId = ({
 }: {
 	paintingsData: Omit<Painting, "_createdAt" | "_updatedAt" | "_type" | "_rev">;
 }) => {
+	const slides = paintingsData.images?.map((image, i) => (
+		<Carousel.Slide key={i}>
+			<NextImage
+				alt={paintingsData.name}
+				src={image.asset.url}
+				width={0}
+				height={0}
+				sizes={"100vw"}
+				placeholder="blur"
+				blurDataURL={image.asset.metadata.lqip}
+				className="pt-24 object-cover h-full w-full"
+			/>
+		</Carousel.Slide>
+	));
+
 	return (
 		<div className="page-container">
 			<h1>{paintingsData.name}</h1>
 			<div className="flex flex-col items-center">
-				{paintingsData.images && paintingsData.images[0] && (
+				<MantineProvider>
+					<Carousel
+						withIndicators
+						w={"40%"}
+						h={"75%"}
+						slideSize={"100%"}
+						withControls
+						// classNames={classes}
+					>
+						{/* <div className="flex flex-col items-center"> */}
+						{slides}
+					</Carousel>
+				</MantineProvider>
+			</div>
+
+			{/* {paintingsData.images && paintingsData.images[0] && (
 					<NextImage
 						alt={paintingsData.name}
 						src={paintingsData.images[0].asset.url}
@@ -81,22 +114,21 @@ const PaintingId = ({
 						blurDataURL={paintingsData.images[0].asset.metadata.lqip}
 						className="pt-24"
 					/>
-				)}
+				)} */}
 
-				<p className="italic pt-8">
-					Availbale as: Original | Limited Edition Print{" "}
-				</p>
-				<p>Dimensions offered: </p>
-				<ul>
-					{paintingsData.dimensions.map((dimension) => (
-						<p key={paintingsData.name}>
-							{dimension.height} x {dimension.width} x {dimension.depth}{" "}
-							(inches)
-						</p>
-					))}
-				</ul>
-			</div>
+			<p className="italic pt-8">
+				Availbale as: Original | Limited Edition Print{" "}
+			</p>
+			<p>Dimensions offered: </p>
+			<ul>
+				{paintingsData.dimensions.map((dimension) => (
+					<p key={paintingsData.name}>
+						{dimension.height} x {dimension.width} x {dimension.depth} (inches)
+					</p>
+				))}
+			</ul>
 		</div>
+		// </div>
 	);
 };
 
